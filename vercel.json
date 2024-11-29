@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "prueba_gestortarea/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "carpeta_de_proyecto/wsgi.py"
+      }
+    ]
+  }

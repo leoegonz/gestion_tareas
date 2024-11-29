@@ -1,0 +1,9 @@
+<!--Vista editar_tarea: Permite editar el título y la descripción de una tarea existente.-->
+<h1>Editar Tarea</h1>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}  <!-- Renderiza los campos del formulario de forma automática -->
+  <button type="submit">Guardar cambios</button>
+</form>
+
+<a href="(% url 'lista_tareas' %)">Volver </a>

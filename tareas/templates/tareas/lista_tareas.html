@@ -1,0 +1,20 @@
+<!--Vista lista_tareas: Muestra todas las tareas almacenadas en la base de datos.-->
+<h1>Lista de Tareas</h1>
+
+<!-- Si no hay tareas, mostramos un mensaje -->
+{% if tareas %}
+  <ul>
+    {% for tarea in tareas %}
+      <li>
+        <strong>{{ tarea.titulo }}</strong> - {{ tarea.descripcion }} -Completada: {{tarea.completada}}
+        <a href="{% url 'editar_tarea' tarea.id %}">Editar</a>
+        <a href="{% url 'eliminar_tarea' tarea.id %}">Eliminar</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No hay tareas disponibles.</p>
+{% endif %}
+
+<!-- Enlace para crear una nueva tarea -->
+<a href="{% url 'crear_tarea' %}">Crear nueva tarea</a>

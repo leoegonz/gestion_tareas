@@ -1,0 +1,8 @@
+<!--Vista crear_tarea: Permite crear una nueva tarea con título y descripción.-->
+<h1>Crear Nueva Tarea</h1>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}  <!-- Renderiza los campos del formulario de forma automática -->
+  <button type="submit">Crear tarea</button>
+</form>
+<a href="(% url 'lista_tareas' %)">Volver </a>
