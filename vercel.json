@@ -12,7 +12,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "carpeta_de_proyecto/wsgi.py"
+        "dest": "prueba_gestortarea/wsgi.py"
       }
     ]
   }
